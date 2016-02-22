@@ -9,7 +9,18 @@ object regular {
 
   private def grep(textString: String, categoryKeywords: Map[String, Array[String]],
                    categoryList: mutable.MutableList[String]): Unit = {
-
+    /**
+      * grep(textString, categoryKeywords, categoryList)
+      *
+      * args:
+      * textString: 文本标题字符串
+      * categoryKeywords: 分类词典（行业，股票，概念板块）
+      * categoryList: 类别List（行业，股票，概念板块）
+      *
+      * return:
+      * Unit
+      *
+      */
     for (indus: String <- categoryKeywords.keys) {
       var i_control = true
       for (keyword: String <- categoryKeywords(indus) if i_control) {
@@ -25,7 +36,20 @@ object regular {
   def predict(textString: String, stockDict: Map[String, Array[String]],
               indusDict: Map[String, Array[String]],
               sectDict: Map[String, Array[String]]) = {
-
+    /**
+      * predict(textString, stockDict, indusDict, sectDict)
+      *
+      * args:
+      * textString: 文本标题字符串
+      * stockDict: 股票关键词词典
+      * indusDict: 行业关键词词典
+      * sectDict: 概念板块关键词词典
+      *
+      * return:
+      * 返回值的顺序为
+      * (股票，行业，版块)
+      *
+      */
     val industryList = new mutable.MutableList[String]
     val stockList = new mutable.MutableList[String]
     val sectionList = new mutable.MutableList[String]
