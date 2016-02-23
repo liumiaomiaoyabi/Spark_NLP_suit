@@ -11,7 +11,7 @@ import scala.collection.mutable.ArrayBuffer
 /**
   * Created by C.J.YOU on 2016/1/21.
   */
-class TitleDeduplicationTest extends  FlatSpec with Matchers{
+class A44 extends  FlatSpec with Matchers{
 
   "test " should "work" in{
 

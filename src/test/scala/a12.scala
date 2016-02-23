@@ -8,7 +8,7 @@ import org.scalatest.{Matchers, FlatSpec}
 import scala.collection.{mutable, Map}
 import scala.collection.mutable.ArrayBuffer
 
-class RegularTest extends  FlatSpec with Matchers{
+class a12 extends  FlatSpec with Matchers{
 
   "test " should "work" in{
     def grep(textString: String, categoryKeywords: Map[String, Array[String]],
