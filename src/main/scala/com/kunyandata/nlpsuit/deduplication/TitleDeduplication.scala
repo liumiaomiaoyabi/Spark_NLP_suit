@@ -55,18 +55,7 @@ object TitleDeduplication {
     * @return 返回值为布尔值，true代表两个标题疑似重复，false反之
     */
   def process(titleStringA: String, titleStringB: String, n: Int, threshold: Double): Boolean = {
-    /**
-      * process(titleStringA, titleStringB, n, threshold)
-      *
-      * args:
-      * titleStringA: 文本标题字符串
-      * titleStringB: 文本标题字符串（与titleStringA分别为两个需要比较的标题，交换顺序不影响结果）
-      * n: 字符串窗口大小
-      * threshold: 判断是否相似的阈值
-      *
-      * return:
-      * true和false
-      */
+
     val titleListA = hashList(titleStringA, n)
     val titleListB = hashList(titleStringB, n)
     val pValue = titleListA.intersect(titleListB).length*1.0/
