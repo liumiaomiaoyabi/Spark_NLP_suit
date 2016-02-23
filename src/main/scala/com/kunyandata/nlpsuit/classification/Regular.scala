@@ -6,7 +6,7 @@ import scala.collection.{mutable, Map}
   * Created by QQ on 2016/2/18.
   * @author QQ
   */
-object a23 {
+object Regular {
 
   private def grep(textString: String, categoryKeywords: Map[String, Array[String]],
                    categoryList: mutable.MutableList[String]): Unit = {

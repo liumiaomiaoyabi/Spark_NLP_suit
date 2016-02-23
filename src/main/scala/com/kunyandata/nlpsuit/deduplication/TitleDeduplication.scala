@@ -5,7 +5,7 @@ import scala.collection.mutable.ArrayBuffer
 /**
   * Created by QQ on 2016/2/18.
   */
-object abcd {
+object TitleDeduplication {
 
   private def formatTitle(titleString: String): String = {
     /**
