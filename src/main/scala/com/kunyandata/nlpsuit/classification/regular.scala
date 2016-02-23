@@ -4,8 +4,9 @@ import scala.collection.{mutable, Map}
 
 /**
   * Created by QQ on 2016/2/18.
+  * @author QQ
   */
-object regular {
+object Regular {
 
   private def grep(textString: String, categoryKeywords: Map[String, Array[String]],
                    categoryList: mutable.MutableList[String]): Unit = {
@@ -33,6 +34,14 @@ object regular {
     }
   }
 
+  /**
+    * 基于规则的分类
+    * @param textString 输入的文本标题字符串
+    * @param stockDict 股票分类词典
+    * @param indusDict 行业分类词典
+    * @param sectDict 板块分类词典
+    * @return 返回（股票: String，行业: String，版块: String）
+    */
   def predict(textString: String, stockDict: Map[String, Array[String]],
               indusDict: Map[String, Array[String]],
               sectDict: Map[String, Array[String]]) = {
