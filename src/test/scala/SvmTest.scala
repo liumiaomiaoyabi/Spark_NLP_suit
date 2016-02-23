@@ -9,7 +9,7 @@ import org.apache.spark.mllib.util.MLUtils
 /**
   * Created by QQ on 2016/2/22.
   */
-class a3 extends  FlatSpec with Matchers{
+class SvmTest extends  FlatSpec with Matchers{
   "test " should "work" in{
 
 //    val pos = LabeledPoint(1.0, Vectors.dense(1.0, 0.0, 3.0))
@@ -18,8 +18,7 @@ class a3 extends  FlatSpec with Matchers{
 //    println(neg)
     val conf = new SparkConf().setMaster("local").setAppName("BinaryClassificationMetricsExample")
     val sc = new SparkContext(conf)
-    val data = MLUtils.loadLibSVMFile(sc, "D:\\QQ\\Desktop\\spark-1.6.0\\spark-1.6.0\\spark-1.6.0" +
-        "\\data\\mllib\\sample_binary_classification_data.txt")
+    val data = MLUtils.loadLibSVMFile(sc, "src/test/resources/sample_binary_classification_data.txt")
     val splits = data.randomSplit(Array(0.8, 0.2))
     val training = splits(0).cache()
     val test = splits(1).cache()

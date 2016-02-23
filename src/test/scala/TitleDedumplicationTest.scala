@@ -9,9 +9,9 @@ import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
 /**
-  * Created by C.J.YOU on 2016/1/21.
+  * Created by QQ on 2016/2/21.
   */
-class A44 extends  FlatSpec with Matchers{
+class TitleDedumplicationTest extends  FlatSpec with Matchers{
 
   "test " should "work" in{
 
