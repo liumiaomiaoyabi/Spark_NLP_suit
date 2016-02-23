@@ -4,10 +4,16 @@ import scala.collection.{mutable, Map}
 
 /**
   * Created by QQ on 2016/2/18.
-  * @author QQ
+  * 基于规则的标题分类
   */
 object Regular {
 
+  /**
+    * 规则分类过程
+    * @param textString 标题字符串
+    * @param categoryKeywords 类别字典，（股票、行业或者概念板块）
+    * @param categoryList 所属类别List
+    */
   private def grep(textString: String, categoryKeywords: Map[String, Array[String]],
                    categoryList: mutable.MutableList[String]): Unit = {
     /**

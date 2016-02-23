@@ -4,19 +4,18 @@ import scala.collection.mutable.ArrayBuffer
 
 /**
   * Created by QQ on 2016/2/18.
+  * 标题去重
   */
+
 object TitleDeduplication {
 
+  /**
+    * 格式化title字符串，去掉多余的空格，字母小写，标点符号英文
+    * @param titleString 标题字符串
+    * @return 格式化之后的标题字符串
+    */
   private def formatTitle(titleString: String): String = {
-    /**
-      * formatTitle(titleString)
-      *
-      * args:
-      * title: 标题文本字符串
-      *
-      * return:
-      * result: 格式化后的文本标题
-      */
+
     val engPunc = Array(",", ".", "!", ";", ":","\"","\"")
     val chiPunc = Array("，", "。", "！", "；", "：", "“", "”")
     val blank = """\s"""
@@ -27,6 +26,12 @@ object TitleDeduplication {
     result
   }
 
+  /**
+    * 输入标题，返回一组哈希数组
+    * @param titleString 标题字符串
+    * @param n 字符串窗口大小，一般设置为2-4
+    * @return 返回元素为哈希值的数组
+    */
   private def hashList(titleString: String, n: Int) = {
 
       val title = formatTitle(titleString)

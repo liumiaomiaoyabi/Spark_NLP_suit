@@ -9,7 +9,7 @@ import org.apache.spark.mllib.util.MLUtils
 /**
   * Created by QQ on 2016/2/22.
   */
-class MLlearn extends  FlatSpec with Matchers{
+class SvmTest extends  FlatSpec with Matchers{
   "test " should "work" in{
 
 //    val pos = LabeledPoint(1.0, Vectors.dense(1.0, 0.0, 3.0))
